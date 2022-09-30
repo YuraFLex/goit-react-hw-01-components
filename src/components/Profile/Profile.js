@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
-import UserCard from "../UserCard/userCard";
-import { Portile } from "./Portfile.styled";
+import PropTypes from 'prop-types';
+import UserCard from '../UserCard/userCard';
+import { Portile } from './Portfile.styled';
 
 export default function Profile({ user }) {
   return (
