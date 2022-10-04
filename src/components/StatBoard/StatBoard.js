@@ -1,16 +1,16 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-import Statistics from "../Statistics/Statistics";
-import { Stats, Title, StatsList, StatsItem } from "./StatBoard.styled";
+import Statistics from '../Statistics/Statistics';
+import { Stats, Title, StatsList, StatsItem } from './StatBoard.styled';
 
 export default function StatBoard({ title, data }) {
   return (
     <Stats>
-      <Title>{title}</Title>
+      {title ? <Title>{title}</Title> : null}
       <StatsList>
         {data.map(({ id, label, percentage }) => (
           <StatsItem key={id}>
-            <Statistics key={id} label={label} percentage={percentage} />
+            <Statistics label={label} percentage={percentage} />
           </StatsItem>
         ))}
       </StatsList>
@@ -23,6 +23,7 @@ StatBoard.propTypes = {
     PropTypes.exact({
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
     })
   ),
 };

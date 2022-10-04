@@ -1,10 +1,10 @@
-import PropTypes from "prop-types";
-import Friend from "./Friend";
+import PropTypes from 'prop-types';
+import Friend from './Friend';
 import {
   FriendBoard,
   UserFriendList,
   UserFriendItem,
-} from "./FriendList.styled";
+} from './FriendList.styled';
 
 export default function FriendList({ friend }) {
   return (
@@ -21,7 +21,11 @@ export default function FriendList({ friend }) {
 }
 
 FriendList.propTypes = {
-  avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool.isRequired,
+  friend: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+    })
+  ),
 };

@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const TransactionHistoryTd = styled.td`
   font-family: ${p => p.theme.fonts.monospace};
@@ -23,6 +23,13 @@ export const TransactionHistoryTd = styled.td`
 export const TransactionHistoryTr = styled.tr`
   :last-child td {
     border-bottom: ${p => p.theme.borders.none};
+  }
+  :nth-child(odd) {
+    background: white;
+  }
+
+  :nth-child(even) {
+    background: #e8e6d1;
   }
 
   :hover td {

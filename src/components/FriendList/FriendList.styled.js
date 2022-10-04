@@ -1,8 +1,8 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const FriendBoard = styled.div`
   width: 600px;
-  background-color: ${p => p.theme.colors.background};
+  /* background-color: ${p => p.theme.colors.background}; */
   border-radius: ${p => p.theme.radii.normal};
   overflow: hidden;
   box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.75);

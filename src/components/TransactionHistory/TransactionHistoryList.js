@@ -1,9 +1,9 @@
-import TransactionHistory from "./TransactionHistory";
+import TransactionHistory from './TransactionHistory';
 import {
   TransactionTable,
   TransactionTh,
-} from "./TransactionHistoryList.styled";
-import PropTypes from "prop-types";
+} from './TransactionHistoryList.styled';
+import PropTypes from 'prop-types';
 
 export default function TransactionHistoryList({ data }) {
   return (
@@ -30,7 +30,12 @@ export default function TransactionHistoryList({ data }) {
 }
 
 TransactionHistoryList.propTypes = {
-  type: PropTypes.string.isRequired,
-  amount: PropTypes.string.isRequired,
-  currency: PropTypes.string.isRequired,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ),
 };
